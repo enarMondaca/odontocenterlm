@@ -8,23 +8,30 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background: #ffffff;
             color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background: #005bac;
             color: white;
-            padding: 1rem;
             text-align: center;
+            padding: 2rem 1rem;
+        }
+        header img {
+            max-width: 150px;
+            margin-bottom: 1rem;
         }
         nav {
             background: #ffd700;
-            padding: 0.5rem;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0.5rem 0;
         }
         nav a {
-            margin: 0 1rem;
+            margin: 0.5rem 1rem;
             color: #005bac;
             text-decoration: none;
             font-weight: bold;
@@ -34,17 +41,10 @@
             max-width: 1000px;
             margin: auto;
         }
-        .galeria img {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px;
-            border: 2px solid #005bac;
-        }
-        footer {
-            background: #005bac;
-            color: white;
-            text-align: center;
-            padding: 1rem;
+        section h2 {
+            color: #005bac;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 0.5rem;
         }
         .perfil {
             display: flex;
@@ -57,53 +57,128 @@
             width: 250px;
             border-radius: 10px;
         }
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .servicio {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            background: #f9f9f9;
+        }
+        .servicio:hover {
+            transform: scale(1.03);
+        }
+        .servicio img {
+            width: 60px;
+            margin-bottom: 0.5rem;
+        }
+        .galeria-toggle {
+            background-color: #005bac;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .galeria {
+            display: none;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .galeria img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background: #005bac;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            z-index: 1000;
+        }
     </style>
+    <script>
+        function toggleGaleria() {
+            const galeria = document.getElementById("galeria");
+            galeria.style.display = (galeria.style.display === "grid") ? "none" : "grid";
+        }
+    </script>
 </head>
 <body>
+    <a class="whatsapp-btn" href="https://wa.me/526683962064" target="_blank">W</a>
+
     <header>
+        <img src="A8985E7B-A57C-444A-9CEE-7A70AD1F3126.jpeg" alt="Logo Odontocenter">
         <h1>Odontocenter</h1>
-        <p>Tu sonrisa, nuestra prioridad</p>
+        <p>Especialistas en crear sonrisas</p>
     </header>
+
     <nav>
         <a href="#sobre">Sobre mí</a>
         <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
+        <a href="#galeria-seccion">Galería</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
     <section id="sobre">
         <h2>Sobre el Dr. Enar Mondaca</h2>
         <div class="perfil">
-            <img src="A8985E7B-A57C-444A-9CEE-7A70AD1F3126.jpeg" alt="Dr. Enar Mondaca">
-            <p>Soy el Dr. Enar Mondaca, apasionado por la odontología y por brindar sonrisas saludables. Además de mi práctica profesional, disfruto de momentos con mi familia y de la pesca deportiva.</p>
+            <img src="9E3C8F96-E06E-4F45-A495-A78C32006C75.jpeg" alt="Dr. Enar Mondaca">
+            <p>Soy el Dr. Enar Mondaca, cirujano dentista con una trayectoria enfocada en mejorar la calidad de vida de mis pacientes a través de tratamientos de alta especialidad. Mi pasión por la odontología se combina con una visión humana y empática, enfocada en brindar atención personalizada con tecnología y ética profesional.</p>
         </div>
     </section>
 
     <section id="servicios">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Ortodoncia</li>
-            <li>Rehabilitación Oral</li>
-            <li>Implantología</li>
-            <li>Periodoncia</li>
-            <li>Endodoncia</li>
-            <li>Y más...</li>
-        </ul>
+        <h2>Servicios Odontológicos</h2>
+        <div class="servicios">
+            <div class="servicio"><img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"><p>Ortodoncia</p></div>
+            <div class="servicio"><img src="https://cdn-icons-png.flaticon.com/512/483/483361.png"><p>Rehabilitación Oral</p></div>
+            <div class="servicio"><img src="https://cdn-icons-png.flaticon.com/512/3448/3448321.png"><p>Implantología</p></div>
+            <div class="servicio"><img src="https://cdn-icons-png.flaticon.com/512/4018/4018730.png"><p>Periodoncia</p></div>
+            <div class="servicio"><img src="https://cdn-icons-png.flaticon.com/512/2038/2038027.png"><p>Endodoncia</p></div>
+        </div>
     </section>
 
-    <section id="galeria">
+    <section id="galeria-seccion">
         <h2>Galería</h2>
-        <div class="galeria">
-            <img src="D397D8B9-C0A3-42E5-9CFD-E4970C2F8664.jpeg" alt="Pesca en la playa">
-            <img src="703F37D0-F1E3-4553-BF00-66675D56E14F.jpeg" alt="Con un pez grande">
-            <img src="24103B61-60D2-4FCC-9043-A7EA5ED452AC.jpeg" alt="Consultorio">
-            <img src="9E3C8F96-E06E-4F45-A495-A78C32006C75.jpeg" alt="Con hijo">
+        <button class="galeria-toggle" onclick="toggleGaleria()">Ver Galería</button>
+        <div class="galeria" id="galeria">
+            <img src="D397D8B9-C0A3-42E5-9CFD-E4970C2F8664.jpeg">
+            <img src="703F37D0-F1E3-4553-BF00-66675D56E14F.jpeg">
+            <img src="24103B61-60D2-4FCC-9043-A7EA5ED452AC.jpeg">
+            <img src="68CC7419-2032-447C-A69F-F15CD151A363.jpeg">
+            <img src="D69F37D3-FC46-4E3A-86F2-FA2D2B968559.jpeg">
         </div>
     </section>
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>Teléfono: 668 396 2064</p>
+        <p>Teléfono: <a href="tel:+526683962064">668 396 2064</a></p>
         <p>Facebook: <a href="https://www.facebook.com/odontocenterDrEnarMondaca" target="_blank">Odontocenter Dr Enar Mondaca</a></p>
     </section>
 
