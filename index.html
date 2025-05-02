@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Enar Mondaca</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        nav {
+            background: #023e8a;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #0077b6;
+        }
+        .services, .daily-life {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1 1 calc(45% - 2rem);
+        }
+        footer {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+    
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .services, .daily-life {
+                flex-direction: column;
+            }
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <h1>Dr. Enar Mondaca</h1>
+    <p>Odontólogo - Profesional y cercano</p>
+</header>
+
+<nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#services">Servicios</a>
+    <a href="#daily">Vida diaria</a>
+    <a href="#contact">Contacto</a>
+</nav>
+
+<section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy el Dr. Enar Mondaca, odontólogo apasionado por mejorar sonrisas. En esta página comparto tanto mi trabajo profesional como momentos de mi vida personal, para que me conozcas mejor.</p>
+</section>
+
+<section id="services">
+    <h2>Servicios Odontológicos</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Ortodoncia</h3>
+            <p>Alineación dental con brackets y alineadores.</p>
+        </div>
+        <div class="card">
+            <h3>Endodoncia</h3>
+            <p>Tratamiento de conductos con tecnología moderna.</p>
+        </div>
+        <div class="card">
+            <h3>Rehabilitación Oral</h3>
+            <p>Prótesis, coronas y restauraciones estéticas.</p>
+        </div>
+        <div class="card">
+            <h3>Periodoncia</h3>
+            <p>Cuidado y tratamiento de encías.</p>
+        </div>
+    </div>
+</section>
+
+<section id="daily">
+    <h2>Mi vida diaria</h2>
+    <p>Un vistazo a mi día a día dentro y fuera del consultorio.</p>
+    <div class="daily-life">
+        <div class="card">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <p>Atendiendo pacientes con pasión.</p>
+        </div>
+        <div class="card">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <p>Un momento con mi familia.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contacto</h2>
+    <p>Celular: <strong>668 396 2064</strong></p>
+    <p>Facebook: <a href="https://www.facebook.com/odontocenter" target="_blank">odontocenter Dr Enar Mondaca</a></p>
+    <p>WhatsApp: <a href="https://wa.me/526683962064" target="_blank">Envíame un mensaje</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Dr. Enar Mondaca - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
